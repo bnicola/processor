@@ -1,0 +1,349 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2016  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 16 16 296 256)
+	(text "ControlUnit" (rect 5 0 48 12)(font "Arial" ))
+	(text "inst" (rect 8 224 20 236)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "instruction[31..0]" (rect 0 0 62 12)(font "Arial" ))
+		(text "instruction[31..0]" (rect 21 27 83 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "instructionAddress[31..0]" (rect 0 0 97 12)(font "Arial" ))
+		(text "instructionAddress[31..0]" (rect 21 43 118 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "aEqualB" (rect 0 0 33 12)(font "Arial" ))
+		(text "aEqualB" (rect 21 59 54 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 1))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "aSmallerB" (rect 0 0 40 12)(font "Arial" ))
+		(text "aSmallerB" (rect 21 75 61 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 1))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "aBiggerB" (rect 0 0 35 12)(font "Arial" ))
+		(text "aBiggerB" (rect 21 91 56 103)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96)(line_width 1))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "aSmallerEqualB" (rect 0 0 62 12)(font "Arial" ))
+		(text "aSmallerEqualB" (rect 21 107 83 119)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112)(line_width 1))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "aBiggerEqualB" (rect 0 0 57 12)(font "Arial" ))
+		(text "aBiggerEqualB" (rect 21 123 78 135)(font "Arial" ))
+		(line (pt 0 128)(pt 16 128)(line_width 1))
+	)
+	(port
+		(pt 280 32)
+		(output)
+		(text "jump" (rect 0 0 18 12)(font "Arial" ))
+		(text "jump" (rect 241 27 259 39)(font "Arial" ))
+		(line (pt 280 32)(pt 264 32)(line_width 1))
+	)
+	(port
+		(pt 280 48)
+		(output)
+		(text "pcLoadImmediate" (rect 0 0 70 12)(font "Arial" ))
+		(text "pcLoadImmediate" (rect 189 43 259 55)(font "Arial" ))
+		(line (pt 280 48)(pt 264 48)(line_width 1))
+	)
+	(port
+		(pt 280 64)
+		(output)
+		(text "opCode[4..0]" (rect 0 0 51 12)(font "Arial" ))
+		(text "opCode[4..0]" (rect 208 59 259 71)(font "Arial" ))
+		(line (pt 280 64)(pt 264 64)(line_width 3))
+	)
+	(port
+		(pt 280 80)
+		(output)
+		(text "src1[4..0]" (rect 0 0 37 12)(font "Arial" ))
+		(text "src1[4..0]" (rect 222 75 259 87)(font "Arial" ))
+		(line (pt 280 80)(pt 264 80)(line_width 3))
+	)
+	(port
+		(pt 280 96)
+		(output)
+		(text "src2[4..0]" (rect 0 0 38 12)(font "Arial" ))
+		(text "src2[4..0]" (rect 221 91 259 103)(font "Arial" ))
+		(line (pt 280 96)(pt 264 96)(line_width 3))
+	)
+	(port
+		(pt 280 112)
+		(output)
+		(text "dest[4..0]" (rect 0 0 37 12)(font "Arial" ))
+		(text "dest[4..0]" (rect 222 107 259 119)(font "Arial" ))
+		(line (pt 280 112)(pt 264 112)(line_width 3))
+	)
+	(port
+		(pt 280 128)
+		(output)
+		(text "wr" (rect 0 0 9 12)(font "Arial" ))
+		(text "wr" (rect 250 123 259 135)(font "Arial" ))
+		(line (pt 280 128)(pt 264 128)(line_width 1))
+	)
+	(port
+		(pt 280 144)
+		(output)
+		(text "memrd" (rect 0 0 29 12)(font "Arial" ))
+		(text "memrd" (rect 230 139 259 151)(font "Arial" ))
+		(line (pt 280 144)(pt 264 144)(line_width 1))
+	)
+	(port
+		(pt 280 160)
+		(output)
+		(text "memwr" (rect 0 0 30 12)(font "Arial" ))
+		(text "memwr" (rect 229 155 259 167)(font "Arial" ))
+		(line (pt 280 160)(pt 264 160)(line_width 1))
+	)
+	(port
+		(pt 280 176)
+		(output)
+		(text "immediate" (rect 0 0 40 12)(font "Arial" ))
+		(text "immediate" (rect 219 171 259 183)(font "Arial" ))
+		(line (pt 280 176)(pt 264 176)(line_width 1))
+	)
+	(port
+		(pt 280 192)
+		(output)
+		(text "immediateVal[31..0]" (rect 0 0 77 12)(font "Arial" ))
+		(text "immediateVal[31..0]" (rect 182 187 259 199)(font "Arial" ))
+		(line (pt 280 192)(pt 264 192)(line_width 3))
+	)
+	(port
+		(pt 280 208)
+		(output)
+		(text "jal" (rect 0 0 7 12)(font "Arial" ))
+		(text "jal" (rect 252 203 259 215)(font "Arial" ))
+		(line (pt 280 208)(pt 264 208)(line_width 1))
+	)
+	(parameter
+		"nop_"
+		"0"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"add_"
+		"1"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"sub_"
+		"2"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"and_"
+		"3"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"or_"
+		"4"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"xor_"
+		"5"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"not_"
+		"6"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"mul_"
+		"7"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"div_"
+		"8"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"shl_"
+		"9"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"shr_"
+		"10"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"pas_"
+		"11"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"addi_"
+		"17"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"subi_"
+		"18"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"andi_"
+		"19"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"ori_"
+		"20"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"xori_"
+		"21"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"noti_"
+		"22"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"muli_"
+		"23"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"divi_"
+		"24"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"shli_"
+		"25"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"shri_"
+		"26"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"lod_"
+		"27"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"str_"
+		"28"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"movi_"
+		"29"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"jeq_"
+		"30"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"jneq_"
+		"31"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"jg_"
+		"32"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"jl_"
+		"33"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"jge_"
+		"34"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"jle_"
+		"35"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"spc_"
+		"36"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"jal_"
+		"001100"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"ret_"
+		"001101"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"jmp_"
+		"001110"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"lui_"
+		"001111"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"mov_"
+		"010000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(drawing
+		(rectangle (rect 16 16 264 224)(line_width 1))
+	)
+	(annotation_block (parameter)(rect 296 -64 396 16))
+)
